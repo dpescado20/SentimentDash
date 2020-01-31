@@ -104,6 +104,7 @@ def update_twitter_graph(n):
             # file_count += 1
 
     except EnvironmentError as e:
+        print(e)
         sentiment = "Waiting for Tweets..."
 
     try:

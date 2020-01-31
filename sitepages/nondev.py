@@ -49,7 +49,7 @@ twitter_graph = dbc.Card(
                                 dcc.Graph(id='graph-twitter', style={'height': 300}),
                                 dcc.Interval(
                                     id='interval-component',
-                                    interval=2 * 1000,  # in milliseconds
+                                    interval=3 * 1000,  # in milliseconds
                                     n_intervals=0
                                 )
                             ]
