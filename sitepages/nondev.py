@@ -47,7 +47,7 @@ twitter_graph = dbc.Card(
                     [
                         dbc.Col(
                             [
-                                dcc.Graph(id='graph-twitter-pie', style={'height': 300}),
+                                dcc.Graph(id='graph-twitter-pie', style={'height': 300}, animate=True),
                                 dcc.Interval(
                                     id='interval-component',
                                     interval=3 * 1000,  # in milliseconds
@@ -79,7 +79,7 @@ twitter_line = dbc.Card(
                         dbc.Col(
                             [
                                 dbc.Label(html.H6("Line Graph")),
-                                dcc.Graph(id='graph-twitter-line', style={'height': 300})
+                                dcc.Graph(id='graph-twitter-line', style={'height': 300}, animate=True)
                             ]
                         )
                     ]
@@ -96,7 +96,7 @@ twitter_bar = dbc.Card(
                 dbc.Row(
                     [
                         dbc.Col(
-                            dbc.Label(html.H6("BAR GRAPH"))
+                            dbc.Label(html.H6("Bar Graph"))
                         )
                     ]
                 )
