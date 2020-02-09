@@ -79,7 +79,7 @@ twitter_line = dbc.Card(
                         dbc.Col(
                             [
                                 dbc.Label(html.H6("Line Graph")),
-                                dcc.Graph(id='graph-twitter-line', style={'height': 300}, animate=True)
+                                dcc.Graph(id='graph-twitter-line', style={'height': 300})
                             ]
                         )
                     ]
