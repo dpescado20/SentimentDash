@@ -73,7 +73,7 @@ class ExtractTweet:
         track = [track]
 
         # choose what we want to filter by
-        stream.filter(track=track, languages=['en'])
+        stream.filter(track=track, languages=['en', 'tl'])
 
     def stop_stream(self):
         global file_count

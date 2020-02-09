@@ -8,7 +8,8 @@ nav = Navbar()
 
 text_input = dbc.Card(
     [
-        dbc.CardHeader("TOPIC", id='txb-header'),
+        # dbc.CardHeader("TOPIC", id='txb-header'),
+        dbc.CardHeader("TWITTER TOPIC", id='txb-header', style={'background-color': '#38A1F3', 'color': 'white'}),
         dbc.CardBody(
             [
                 dbc.Form(
@@ -30,7 +31,7 @@ text_input = dbc.Card(
 
 twitter_graph = dbc.Card(
     [
-        dbc.CardHeader("TWITTER"),
+        # dbc.CardHeader("TWITTER"),
         # dbc.CardHeader("TWITTER", style={'background-color': '#38A1F3', 'color': 'white'}),
         dbc.CardBody(
             [
@@ -46,7 +47,7 @@ twitter_graph = dbc.Card(
                     [
                         dbc.Col(
                             [
-                                dcc.Graph(id='graph-twitter', style={'height': 300}),
+                                dcc.Graph(id='graph-twitter-pie', style={'height': 300}),
                                 dcc.Interval(
                                     id='interval-component',
                                     interval=3 * 1000,  # in milliseconds
@@ -63,9 +64,44 @@ twitter_graph = dbc.Card(
                             ]
                         )
                     ]
-                )
+                ),
             ]
         ),
+    ]
+)
+
+twitter_line = dbc.Card(
+    [
+        dbc.CardBody(
+            [
+                dbc.Row(
+                    [
+                        dbc.Col(
+                            [
+                                dbc.Label(html.H6("Line Graph")),
+                                dcc.Graph(id='graph-twitter-line', style={'height': 300})
+                            ]
+                        )
+                    ]
+                )
+            ]
+        )
+    ]
+)
+
+twitter_bar = dbc.Card(
+    [
+        dbc.CardBody(
+            [
+                dbc.Row(
+                    [
+                        dbc.Col(
+                            dbc.Label(html.H6("BAR GRAPH"))
+                        )
+                    ]
+                )
+            ]
+        )
     ]
 )
 
@@ -79,6 +115,10 @@ body = dbc.Container(
                         text_input,
                         html.Br(),
                         twitter_graph,
+                        html.Br(),
+                        twitter_line,
+                        html.Br(),
+                        twitter_bar,
                         html.Br(),
                         html.Br()
                     ]
